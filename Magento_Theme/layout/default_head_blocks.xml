@@ -7,5 +7,9 @@
         <remove src="css/styles-l.css" media="screen and (min-width: 768px)" />
         <remove src="css/print.css" media="print" />
         <remove src="mage/calendar.css" />
+
+        <script src="Magento_Theme::js/lib/loadCSS.js" async="true" />
+        <script src="Magento_Theme::js/lib/cssrelpreload.js" async="true" />
+        <script src="Magento_Theme::js/lib/lazysizes.js" async="true" />
     </head>
 </page>
