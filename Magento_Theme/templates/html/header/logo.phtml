@@ -1,0 +1,24 @@
+<?php
+/**
+ * @var \Magento\Theme\Block\Html\Header\Logo $block
+ */
+?>
+
+<span data-action="toggle-nav" class="action nav-toggle">
+    <span>
+        <?php /* @escapeNotVerified */ echo __('Toggle Nav') ?>
+    </span>
+</span>
+
+<?php $storeName = $block->getThemeName() ? $block->getThemeName() : $block->getLogoAlt();?>
+<a class="logo"
+   href="<?php echo $block->getUrl(''); ?>"
+   title="<?php /* @escapeNotVerified */ echo $storeName ?>"
+>
+    <img class="lazyload"
+         data-src="<?php /* @escapeNotVerified */ echo $block->getLogoSrc() ?>"
+         alt="<?php /* @escapeNotVerified */ echo $block->getLogoAlt() ?>"
+         <?php echo $block->getLogoWidth() ? 'width="' . $block->getLogoWidth() . '"' : '' ?>
+         <?php echo $block->getLogoHeight() ? 'height="' . $block->getLogoHeight() . '"' : '' ?>
+    >
+</a>
