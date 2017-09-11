@@ -1,0 +1,9 @@
+<?php /** @var $block \Magento\Catalog\Block\Product\Image */ ?>
+
+<img class="photo image lazyload"
+     <?php /* @escapeNotVerified */ echo $block->getCustomAttributes(); ?>
+     data-src="<?php /* @escapeNotVerified */ echo $block->getImageUrl(); ?>"
+     width="<?php /* @escapeNotVerified */ echo $block->getWidth(); ?>"
+     height="<?php /* @escapeNotVerified */ echo $block->getHeight(); ?>"
+     alt="<?php /* @escapeNotVerified */ echo $block->stripTags($block->getLabel(), null, true); ?>"
+/>
