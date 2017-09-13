@@ -2,7 +2,9 @@
     "name": "igloczek/theme-frontend-performance",
     "description": "Demo theme with various performance optimalization tricks applied",
     "require": {
-        "magento/framework": "*"
+        "magento/framework": "*",
+        "snowdog/frontools": "*",
+        "snowdog/theme-blank-sass": "*"
     },
     "type": "magento2-theme",
     "version": "0.1.0",
