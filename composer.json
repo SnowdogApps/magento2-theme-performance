@@ -13,13 +13,5 @@
         "files": [
             "registration.php"
         ]
-    },
-    "extra": {
-        "map": [
-            [
-                "config",
-                "dev/tools/frontools/config"
-            ]
-        ]
     }
 }
