@@ -1,0 +1,13 @@
+{
+    "blank": {
+      "src"    : "vendor/snowdog/theme-blank-sass",
+      "dest"   : "pub/static/frontend/Snowdog/blank",
+      "locale" : ["en_US"]
+    },
+    "performance": {
+      "src"    : "vendor/snowdog/theme-frontend-performance",
+      "dest"   : "pub/static/frontend/Snowdog/performance",
+      "locale" : ["en_US"],
+      "parent" : "blank"
+    }
+  }

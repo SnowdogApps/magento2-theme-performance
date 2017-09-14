@@ -1,5 +1,5 @@
 {
-    "name": "igloczek/theme-frontend-performance",
+    "name": "snowdog/theme-frontend-performance",
     "description": "Demo theme with various performance optimalization tricks applied",
     "require": {
         "magento/framework": "*",
@@ -12,6 +12,14 @@
     "autoload": {
         "files": [
             "registration.php"
+        ]
+    },
+    "extra": {
+        "map": [
+            [
+                "config",
+                "dev/tools/frontools/config"
+            ]
         ]
     }
 }
