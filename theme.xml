@@ -2,5 +2,5 @@
        xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/theme.xsd"
 >
     <title>Snowdog Performance Demo</title>
-    <parent>Magento/luma</parent>
+    <parent>Snowdog/blank</parent>
 </theme>
