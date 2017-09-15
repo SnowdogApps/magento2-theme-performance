@@ -1,34 +1,29 @@
 <!doctype html>
 <html <?php /* @escapeNotVerified */ echo $htmlAttributes ?>>
     <head <?php /* @escapeNotVerified */ echo $headAttributes ?>>
-        <link href="<?= $this->assetRepo->getUrl('css/styles-m.css') ?>"
+        <style>
+            .lazyload,
+            .lazyloading {
+                background: #f0f0f0;
+                height: inherit;
+                width: inherit;
+            }
+            .lazyloaded {
+                background: transparent;
+                transition: background 300ms;
+            }
+        </style>
+        <link href="<?= $this->assetRepo->getUrl('css/styles.css') ?>"
               rel="preload"
               as="style"
               onload="this.rel='stylesheet'"
         />
-        <link href="<?= $this->assetRepo->getUrl('css/styles-l.css') ?>"
-              rel="preload"
-              as="style"
-              onload="this.rel='stylesheet'"
-              media="screen and (min-width: 768px)"
-        />
-        <link href="<?= $this->assetRepo->getUrl('mage/calendar.css') ?>"
-              rel="preload"
-              as="style"
-              onload="this.rel='stylesheet'"
-        />
+
         <link href="<?= $this->assetRepo->getUrl('css/print.css') ?>"
               rel="preload"
               as="style"
               onload="this.rel='stylesheet'"
               media="print"
-        />
-
-        <!-- Sample data styles moved from media -->
-        <link href="<?= $this->assetRepo->getUrl('Magento_Theme/css/media.css') ?>"
-              rel="preload"
-              as="style"
-              onload="this.rel='stylesheet'"
         />
 
         <?php /* @escapeNotVerified */ echo $requireJs ?>

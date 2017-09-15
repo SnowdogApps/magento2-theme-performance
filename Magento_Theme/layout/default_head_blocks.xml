@@ -3,8 +3,7 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd"
 >
     <head>
-        <remove src="css/styles-m.css" />
-        <remove src="css/styles-l.css" media="screen and (min-width: 768px)" />
+        <remove src="css/styles.css" />
         <remove src="css/print.css" media="print" />
         <remove src="mage/calendar.css" />
 
