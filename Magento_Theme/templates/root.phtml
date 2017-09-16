@@ -62,6 +62,11 @@
               media="print"
         />
 
+        <link href="<?= $this->assetRepo->getUrl('jquery.js') ?>" as="script" rel="prefetch" />
+        <link href="<?= $this->assetRepo->getUrl('jquery/jquery-ui.js') ?>" as="script" rel="prefetch" />
+        <link href="<?= $this->assetRepo->getUrl('knockoutjs/knockout.js') ?>" as="script" rel="prefetch" />
+        <link href="<?= $this->assetRepo->getUrl('underscore.js') ?>" as="script" rel="prefetch" />
+
         <?php /* @escapeNotVerified */ echo $requireJs ?>
         <?php /* @escapeNotVerified */ echo $headContent ?>
         <?php /* @escapeNotVerified */ echo $headAdditional ?>
