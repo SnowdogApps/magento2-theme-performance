@@ -2,21 +2,57 @@
 <html <?php /* @escapeNotVerified */ echo $htmlAttributes ?>>
     <head <?php /* @escapeNotVerified */ echo $headAttributes ?>>
         <style>
-            .lazyload,
-            .lazyloading {
-                background: #f0f0f0;
-                height: inherit;
-                width: inherit;
+            body:before,
+            body:after {
+                content: '';
+                position: fixed;
+                top: 0;
+                z-index: 1000;
+                width: 100%;
+                height: 100%;
             }
-            .lazyloaded {
-                background: transparent;
-                transition: background 300ms;
+            body:before {
+                background: #f6f7f9;
+            }
+            body:after {
+                -webkit-animation-duration: 1s;
+                -webkit-animation-fill-mode: forwards;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-name: placeHolderShimmer;
+                -webkit-animation-timing-function: linear;
+                background-image: -webkit-gradient(linear, left top, right top, from(#f6f7f9), color-stop(20%, #e9ebee), color-stop(40%, #f6f7f9), to(#f6f7f9));
+                background-image: -webkit-linear-gradient(left, #f6f7f9 0%, #e9ebee 20%, #f6f7f9 40%, #f6f7f9 100%);
+                background-image: -o-linear-gradient(left, #f6f7f9 0%, #e9ebee 20%, #f6f7f9 40%, #f6f7f9 100%);
+                background-image: linear-gradient(to right, #f6f7f9 0%, #e9ebee 20%, #f6f7f9 40%, #f6f7f9 100%);
+                background-repeat: no-repeat;
+                background-size: 200vw;
+            }
+            @-webkit-keyframes placeHolderShimmer{
+                0%{
+                    background-position: -100% 0
+                }
+                100%{
+                    background-position: 200% 0
+                }
+            }
+            @keyframes placeHolderShimmer{
+                0%{
+                    background-position: -100% 0
+                }
+                100%{
+                    background-position: 200% 0
+                }
+            }
+            body.loaded:before,
+            body.loaded:after {
+                content: none;
             }
         </style>
+
         <link href="<?= $this->assetRepo->getUrl('css/styles.css') ?>"
               rel="preload"
               as="style"
-              onload="this.rel='stylesheet'"
+              onload="this.rel='stylesheet';document.body.className+=' loaded'"
         />
 
         <link href="<?= $this->assetRepo->getUrl('css/print.css') ?>"
